@@ -1,0 +1,57 @@
+{
+  "source": "synthetic preference labels from documented stress score; not measured cipher speed",
+  "seed": 42,
+  "samples": 12000,
+  "train_samples": 9000,
+  "test_samples": 3000,
+  "features": [
+    "latency_ms",
+    "jitter_ms",
+    "loss_pct"
+  ],
+  "classes": {
+    "1": "AES-256-GCM",
+    "2": "ChaCha20-Poly1305"
+  },
+  "sklearn_version": "1.9.1",
+  "numpy_version": "2.5.4",
+  "node_count": 111,
+  "classification_report": {
+    "1": {
+      "precision": 0.90625,
+      "recall": 0.9043659043659044,
+      "f1-score": 0.9053069719042663,
+      "support": 481.0
+    },
+    "2": {
+      "precision": 0.9817460317460317,
+      "recall": 0.982135768161969,
+      "f1-score": 0.9819408612820004,
+      "support": 2519.0
+    },
+    "accuracy": 0.9696666666666667,
+    "macro avg": {
+      "precision": 0.9439980158730159,
+      "recall": 0.9432508362639367,
+      "f1-score": 0.9436239165931334,
+      "support": 3000.0
+    },
+    "weighted avg": {
+      "precision": 0.9696415013227513,
+      "recall": 0.9696666666666667,
+      "f1-score": 0.9696538943517703,
+      "support": 3000.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      435,
+      46
+    ],
+    [
+      45,
+      2474
+    ]
+  ],
+  "warning": "Held-out synthetic policy agreement is not evidence of throughput, latency, or security improvements."
+}
